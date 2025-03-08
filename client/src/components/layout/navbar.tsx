@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { Link } from "wouter";
-import { Menu, X } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import Logo from "@/components/layout/logo_2.svg"; // Adjust the path to your logo file
 
+// Add your logo import (replace with the correct path to your logo)
 const navigation = [
   { name: "Features", href: "#features" },
   { name: "About", href: "#about" },
@@ -16,10 +18,15 @@ export default function Navbar() {
   return (
     <nav className="fixed w-full bg-background/80 backdrop-blur z-50 border-b">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 justify-between items-center">
+        <div className="flex h-20 justify-between items-center">
           <div className="flex items-center">
-            <Link href="/" className="text-2xl font-bold">
-              Intelion
+            <Link href="/">
+              {/* Replace the text with your logo */}
+              <img
+                src={Logo}
+                alt="Intelion Logo"
+                style={{ height: '150px', width: 'auto' }} // Adjust height and width as needed
+              />
             </Link>
           </div>
 
